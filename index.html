@@ -20,14 +20,15 @@ header {
     padding: 30px 15px;
 }
 
-.lang-btn {
-    display: inline-block;
-    margin-top: 10px;
+button {
+    margin-top: 12px;
     padding: 8px 16px;
     background: #c49a6c;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .container {
@@ -71,6 +72,10 @@ footer {
     background: #1f1f1f;
     color: white;
 }
+
+a {
+    color: #c49a6c;
+}
 </style>
 </head>
 
@@ -78,8 +83,8 @@ footer {
 
 <header>
     <h1>Latvian Kraft</h1>
-    <p>Traditional Latvian Cold Smoked Meat</p>
-    <a class="lang-btn" href="lv.html">Latviešu valoda</a>
+    <p id="subtitle">Traditional Latvian Cold Smoked Meat</p>
+    <button onclick="switchLang()">Latviešu</button>
 </header>
 
 <div class="container">
@@ -90,36 +95,68 @@ footer {
     <img src="img3.jpg" class="vertical">
 </div>
 
-<div class="text">
-<p>
-Latvian Kraft is a small artisan smokehouse preserving and continuing the
-traditional Latvian craft of meat smoking.
-</p>
-
-<p>
-Our products are made using slow cold-smoke methods, allowing time,
-smoke, and wood to naturally develop deep flavor without rush.
-</p>
-
-<p>
-We use hardwood firewood and selected evergreen branches to create a rich,
-layered aroma and strong character — inspired by Latvian forests and nature.
-</p>
-
-<p>
-We believe in simplicity, raw ingredient quality, and patience —
-where tradition is not just a word, but a process.
-</p>
-</div>
+<div class="text" id="content"></div>
 
 </div>
 
-<footer>
+<footer id="footer"></footer>
+
+<script>
+let lang = "en";
+
+const texts = {
+en: {
+subtitle: "Traditional Latvian Cold Smoked Meat",
+button: "Latviešu",
+content: `
+<p>Latvian Kraft is a small artisan smokehouse preserving and continuing the traditional Latvian craft of meat smoking.</p>
+
+<p>Our products are made using slow cold-smoke methods, allowing time, smoke, and wood to naturally develop deep flavor without rush.</p>
+
+<p>We use hardwood firewood and selected evergreen branches to create a rich, layered aroma and strong character — inspired by Latvian forests and nature.</p>
+
+<p>We believe in simplicity, raw ingredient quality, and patience — where tradition is not just a word, but a process.</p>
+`,
+footer: `
 📞 +371 26 987 327<br>
-🔗 <a href="https://facebook.com/kupinatavas.kupinajumi" style="color:#c49a6c;">
-facebook.com/kupinatavas.kupinajumi
-</a>
-</footer>
+🔗 <a href="https://facebook.com/kupinatavas.kupinajumi">facebook.com/kupinatavas.kupinajumi</a>
+`
+},
+
+lv: {
+subtitle: "Latvijas auksti kūpināta gaļa",
+button: "English",
+content: `
+<p>Latvian Kraft ir neliela amatnieciska darbnīca, kurā tiek saglabāta un turpināta tradicionālā Latvijas gaļas kūpināšanas prasme.</p>
+
+<p>Mūsu produkti top, izmantojot auksto kūpināšanu dūmos, ļaujot laikam, dūmiem un koksnei darīt savu darbu bez steigas.</p>
+
+<p>Kūpināšanā izmantojam lapkoku malku un skujkoku zariņus, kas piešķir produktam dziļu, piesātinātu aromātu un izteiktu raksturu. Rezultāts ir bagātīga, nobriedusi garša — ar skaidru Latvijas dabas un meža noskaņu.</p>
+
+<p>Mēs ticam vienkāršībai, izejvielu kvalitātei un procesam, kurā tradīcija nav tikai vārds, bet darbs un pacietība.</p>
+`,
+footer: `
+📞 +371 26 987 327<br>
+🔗 <a href="https://facebook.com/kupinatavas.kupinajumi">facebook.com/kupinatavas.kupinajumi</a>
+`
+}
+};
+
+function render() {
+document.getElementById("subtitle").innerHTML = texts[lang].subtitle;
+document.querySelector("button").innerHTML = texts[lang].button;
+document.getElementById("content").innerHTML = texts[lang].content;
+document.getElementById("footer").innerHTML = texts[lang].footer;
+}
+
+function switchLang() {
+lang = (lang === "en") ? "lv" : "en";
+render();
+}
+
+render();
+</script>
 
 </body>
 </html>
+
