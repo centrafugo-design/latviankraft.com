@@ -1,41 +1,125 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LatvianKraft</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #111;
-      color: #eee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    .card {
-      max-width: 600px;
-      padding: 2rem;
-      border: 1px solid #333;
-      border-radius: 12px;
-    }
-    h1 {
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-    }
-    p {
-      opacity: 0.85;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Latvian Kraft</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    color: #222;
+    text-align: center;
+}
+
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 30px 15px;
+}
+
+.lang-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #c49a6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.vertical {
+    width: 260px;
+    height: 380px;
+}
+
+.horizontal {
+    width: 420px;
+    height: 260px;
+}
+
+.text {
+    margin-top: 40px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1f1f1f;
+    color: white;
+}
+</style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>LatvianKraft</h1>
-    <p>Amatniecība · Dizains · Kvalitāte</p>
-    <p>Drīzumā</p>
-  </div>
+
+<header>
+    <h1>Latvian Kraft</h1>
+    <p>Traditional Latvian Cold Smoked Meat</p>
+    <a class="lang-btn" href="lv.html">Latviešu valoda</a>
+</header>
+
+<div class="container">
+
+<div class="image-row">
+    <img src="img1.jpg" class="vertical">
+    <img src="img2.jpg" class="horizontal">
+    <img src="img3.jpg" class="vertical">
+</div>
+
+<div class="text">
+<p>
+Latvian Kraft is a small artisan smokehouse preserving and continuing the
+traditional Latvian craft of meat smoking.
+</p>
+
+<p>
+Our products are made using slow cold-smoke methods, allowing time,
+smoke, and wood to naturally develop deep flavor without rush.
+</p>
+
+<p>
+We use hardwood firewood and selected evergreen branches to create a rich,
+layered aroma and strong character — inspired by Latvian forests and nature.
+</p>
+
+<p>
+We believe in simplicity, raw ingredient quality, and patience —
+where tradition is not just a word, but a process.
+</p>
+</div>
+
+</div>
+
+<footer>
+📞 +371 26 987 327<br>
+🔗 <a href="https://facebook.com/kupinatavas.kupinajumi" style="color:#c49a6c;">
+facebook.com/kupinatavas.kupinajumi
+</a>
+</footer>
+
 </body>
 </html>
